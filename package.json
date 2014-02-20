@@ -1,0 +1,31 @@
+{
+  "name": "nuclear-i18n",
+  "version": "1.0.0",
+  "description": "i18next wrapper with markdown support",
+  "main": "./lib/i18n.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elisee/nuclear-i18n.git"
+  },
+  "keywords": [
+    "i18n",
+    "i18next",
+    "markdown",
+    "marked"
+  ],
+  "author": "Elisée Maurer <elisee@sparklinlabs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elisee/nuclear-i18n/issues"
+  },
+  "homepage": "https://github.com/elisee/nuclear-i18n",
+  "devDependencies": {
+    "gulp-util": "~2.2.14",
+    "gulp": "~3.5.2",
+    "coffee-script": "~1.7.1",
+    "gulp-coffee": "~1.4.1"
+  }
+}
