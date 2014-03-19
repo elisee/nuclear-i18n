@@ -2,7 +2,7 @@ i18next = require 'i18next'
 marked = require 'marked'
 
 cachedMarkdownsByLocale = {}
-markdownI18nCache = (i18n, key) ->
+markdownI18nCache = (i18n, key, data) ->
   cachedMarkdowns = cachedMarkdownsByLocale[i18n.locale()]
   if ! cachedMarkdowns?
     cachedMarkdowns = {}
@@ -10,7 +10,7 @@ markdownI18nCache = (i18n, key) ->
 
   html = cachedMarkdowns[key]
   if ! html?
-    html = marked i18n.t key
+    html = marked i18n.t key, data
     cachedMarkdowns[key] = html
 
   html
@@ -34,7 +34,7 @@ module.exports = (app, namespaces=[]) ->
     i18next.handle req, res, ->
       res.locals.i18n =
         t: req.i18n.t
-        md: (key) -> markdownI18nCache req.i18n, key
+        md: (key, data) -> markdownI18nCache req.i18n, key, data
       next()
     return
 
