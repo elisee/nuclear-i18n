@@ -35,6 +35,7 @@ module.exports = (app, namespaces=[]) ->
       res.locals.i18n =
         t: req.i18n.t
         md: (key, data) -> markdownI18nCache req.i18n, key, data
+        lng: req.i18n.lng
       next()
     return
 

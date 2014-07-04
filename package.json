@@ -1,6 +1,6 @@
 {
   "name": "nuclear-i18n",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "i18next wrapper with markdown support",
   "main": "./lib/i18n.js",
   "scripts": {
@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/elisee/nuclear-i18n",
   "devDependencies": {
-    "gulp-util": "~2.2.14",
-    "gulp": "~3.5.2",
+    "gulp-util": "~2.2.19",
+    "gulp": "~3.8.5",
     "coffee-script": "~1.7.1",
-    "gulp-coffee": "~1.4.1"
+    "gulp-coffee": "~2.0.1"
   }
 }

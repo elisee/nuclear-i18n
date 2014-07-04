@@ -7,7 +7,7 @@ gulp.task 'coffee', ->
     .pipe coffee( bare: true ).on 'error', gutil.log
     .pipe gulp.dest './lib'
 
-gulp.task 'watch', ->
+gulp.task 'watch', [ 'coffee' ], ->
   gulp.watch './src/*.coffee', [ 'coffee' ]
 
-gulp.task 'default', [ 'coffee', 'watch' ]
+gulp.task 'default', [ 'coffee' ]
